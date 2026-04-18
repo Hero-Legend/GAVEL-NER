@@ -1,0 +1,8 @@
+law
+location
+money
+name
+num
+org
+prison
+time

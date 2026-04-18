@@ -1,0 +1,15 @@
+{
+  "dataset": "PBII legal NER",
+  "labels": [
+    "law",
+    "location",
+    "money",
+    "name",
+    "num",
+    "org",
+    "prison",
+    "time"
+  ],
+  "train_samples": 3530,
+  "dev_samples": 706
+}

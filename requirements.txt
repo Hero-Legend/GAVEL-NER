@@ -1,0 +1,11 @@
+torch
+transformers
+seqeval
+jieba
+numpy
+matplotlib
+seaborn
+scikit-learn
+openai
+torchcrf
+tqdm

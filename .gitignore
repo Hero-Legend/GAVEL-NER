@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+outputs/
+results/
+model_path/
+hf_models/
+*.log
+.env
