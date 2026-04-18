@@ -23,6 +23,8 @@ This public repository is the legacy code release for the project formerly organ
 - `MVCL_bert.py`: core training and evaluation implementation retained under its legacy filename for compatibility
 - `llm_eval.py`: generative baseline evaluation utilities
 
+`llm_eval.py` expects API credentials through environment variables such as `DEEPSEEK_API_KEY`, `QWEN_API_KEY`, and `KIMI_API_KEY`.
+
 ## Recommended citation label
 
 If you refer to this project in manuscripts, slides, or system descriptions, please use the name `GAVEL-NER`.
