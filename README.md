@@ -4,13 +4,23 @@ GAVEL-NER is a deployment-oriented Chinese legal named entity recognition projec
 
 This public release tracks the current paper-facing experiment code rather than the earliest MVCL-NER prototype snapshot. Legacy class names such as `MVCLBert` or `MVCLDataset` are retained in some scripts for compatibility, but the public project and manuscript name is `GAVEL-NER`.
 
-## Included in this release
+## Release scope
+
+This repository is a curated public release. It includes the scripts and datasets used to support the current manuscript revision, but it does not include every historical intermediate file from the broader local workspace.
+
+Included:
 
 - current CAIL2021 experiment scripts for CRF-free vs CRF comparison, latency, noise robustness, learning curves, and ablations
 - span-based and cross-dataset comparison scripts used in the current revision cycle
 - Qwen adaptation and inference evaluation scripts
 - CAIL2021 formatted data under `data/formatted_data_fixed.json`
 - PBII legal-domain data under `data/pbii_raw/` and prepared PBII files under `data/pbii/`
+
+Not included:
+
+- local checkpoints and output folders
+- server-only queue utilities and ad hoc launch scripts
+- unrelated retrieval or temporal-law experiments from the mixed local workspace
 
 ## Main entry points
 
@@ -29,6 +39,13 @@ This public release tracks the current paper-facing experiment code rather than 
 - `data/raw/xxcq_mid.jsonl`: raw jsonl snapshot retained for reference
 - `data/pbii_raw/`: original PBII release files available in the local workspace
 - `data/pbii/`: prepared PBII files for direct use with `cross_dataset_bio.py`
+
+## Quick start
+
+1. Install dependencies from `requirements.txt`.
+2. Place the RoBERTa backbone under `./model_path/chinese-roberta-wwm-ext`.
+3. Run the main fixed-split comparison with `python cail_multiseed_crf_compare.py`.
+4. Run `modern_span_baselines.py` or `noise_robustness_eval.py` for the corresponding analysis tables.
 
 ## Setup notes
 
